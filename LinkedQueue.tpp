@@ -32,7 +32,7 @@ template <typename T>
 T LinkedQueue<T>::back() const {
     // TODO
      if (head == nullptr) {
-        throw string("back(): error, empty queue");
+        throw string("back: error, queue is empty, cannot access the back");
     }
     return last->value;
 }
@@ -75,7 +75,7 @@ void LinkedQueue<T>::dequeue() {
     // TODO
 
     if (head == nullptr) {
-        throw string("dequeue(): error empty queue");
+        throw string("dequeue: error, queue is empty, cannot dequeue");
     }
 
     Node* curr = head;
@@ -111,7 +111,7 @@ T LinkedQueue<T>::front() const {
     // TODO
 
     if (this->length == 0) {
-        throw string("front(): error no front access, empty queue");
+        throw string("front: error, queue is empty, cannot access the front");
     }
 
     return head->value;

@@ -58,7 +58,10 @@ void LinkedQueue<T>::clear() {
 template <typename T>
 void LinkedQueue<T>::copy(const LinkedQueue<T>& copyObj) {
     // TODO
-    this->clear();
+    this->head = nullptr;
+    this->last = nullptr;
+    this->length = 0;
+    
     Node* curr = copyObj.head;
     while (curr != nullptr) {
         this->enqueue(curr->value);
@@ -95,11 +98,11 @@ void LinkedQueue<T>::enqueue(const T& elem) {
    if (head == nullptr) {
         head = n;
         last = n;
-        return;
-    }
 
-    last->next = n;
-    last = n;
+    } else { 
+        last->next = n;
+        last = n;
+    }
     this->length++;
 }
 

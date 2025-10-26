@@ -1,0 +1,43 @@
+=== LINKED QUEUE TEST DRIVER ===
+
+Test 1: Integer Queue - Basic Operations
+Queue created. Is it empty? Yes
+Front: Caught exception (front): front(): error no front access, empty queue
+Back: Caught exception (back): back(): error, empty queue
+
+Test 2: Enqueuing 6 numbers...
+Enqueued: 5
+Enqueued: 10
+Enqueued: 15
+Enqueued: 20
+Enqueued: 25
+Enqueued: 30
+Front: 5
+Back: 30
+Length: 6
+
+Test 3: Dequeuing two numbers...
+After removing 2, front is now: 15
+Length: 4
+
+Test 4: Copy Constructor
+Copy created. Front: 15, Back: 30, Length: 4
+
+Test 5: Assignment Operator
+Assigned queue created. Front: 15, Back: 30, Length: 4
+
+Test 6: Clear Function & Empty Queue Check
+Queue cleared. Is empty? Yes
+Caught exception on front(): front(): error no front access, empty queue
+Caught exception on dequeue(): dequeue(): error empty queue
+
+Test 7: String Queue
+Front: Red
+Back: Blue
+Length: 3
+After one dequeue, new front: Green
+Copied string queue - length: 2, front: Green, back: Blue
+Assigned + modified string queue - front: Green, back: Yellow, length: 3
+Cleared string queue. Empty? Yes
+
+=== ALL TESTS COMPLETED SUCCESSFULLY ===

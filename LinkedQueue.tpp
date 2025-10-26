@@ -61,7 +61,7 @@ void LinkedQueue<T>::copy(const LinkedQueue<T>& copyObj) {
     this->head = nullptr;
     this->last = nullptr;
     this->length = 0;
-    
+
     Node* curr = copyObj.head;
     while (curr != nullptr) {
         this->enqueue(curr->value);
@@ -95,13 +95,13 @@ void LinkedQueue<T>::enqueue(const T& elem) {
     Node* n = new Node(elem);
     n->next = nullptr;
 
-   if (head == nullptr) {
-        head = n;
-        last = n;
+   if (this->isEmpty()) {
+        this-> head = n;
+        this-> last = n;
 
     } else { 
-        last->next = n;
-        last = n;
+        this->last->next = n;
+        this->last = n;
     }
     this->length++;
 }
